@@ -40,3 +40,34 @@ export function flattening(inputList) {
     return inputList.reduce((ae1,ae2)=>ae1.concat(ae2))
 }
 console.log(flattening(arrays))
+
+export function loop(value, test, update, body){
+    while(test(value)){
+    body(value)
+    value = update(value)
+    }
+}
+
+loop(3, n => n > 0, n => n - 1, console.log);
+
+function everyLoop(array, test) 
+{
+  // Your code here.
+  let returnValue = true
+  for(let item of array){
+    returnValue = returnValue && test(item)
+  }
+  return returnValue
+}
+
+function everySome(array, test) 
+{
+// Your code here.
+} 
+
+console.log(everyLoop([1, 3, 5], n => n < 10));
+// → true
+console.log(everyLoop([2, 4, 16], n => n < 10));
+// → false
+console.log(everyLoop([], n => n < 10));
+// → true
