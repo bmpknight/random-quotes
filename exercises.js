@@ -37,6 +37,6 @@ function repeat(n, action) {
   // -> [1,2,3,4,5,6]`
 
 export function flattening(inputList) {
-    return inputList
+    return inputList.reduce((ae1,ae2)=>ae1.concat(ae2))
 }
 console.log(flattening(arrays))
