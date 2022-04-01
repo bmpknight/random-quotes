@@ -7,4 +7,3 @@ console.log(Math.floor((3 * Math.random())))
 let index = Math.floor((3 * Math.random()))
 console.log(quotes[index])
 
-//test
