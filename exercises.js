@@ -71,11 +71,20 @@ console.log(everyLoop([], n => n < 10));
  export function everySome(array, test) 
 {
 // Your code here.
-array.some(test)
-} 
+// test(item1)
+//
+return !array.some(item => {
+    console.log("Applying the test to " + item + "with result" + test(item))
+    if (!test(item)) {
+        console.log("I found an item that doesn't meet the test!")
+    }
+    return !test(item)
+})
+
 console.log(everySome([1, 3, 5], n => n < 10));
 // → true
 console.log(everySome([2, 4, 16], n => n < 10));
 // → false
 console.log(everySome([], n => n < 10));
 // → true
+}
