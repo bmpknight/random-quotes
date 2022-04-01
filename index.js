@@ -1,9 +1,9 @@
 let quotes = [`"Do or do not, there is no try" - Yoda`,
 `"Never put off tomorrow what you can do today." - Thomas Jefferson`,
 `"Technology is the campfire around which we tell our stories." - Laurie Anderson`]
-console.log(Math.random())
-console.log(3 * Math.random())
-console.log(Math.floor((3 * Math.random())))
-let index = Math.floor((3 * Math.random()))
+//  console.log(Math.random())
+// console.log(3 * Math.random())
+// console.log(Math.floor((3 * Math.random())))
+let index = Math.floor((quotes.length * Math.random()))
 console.log(quotes[index])
 
